@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.terminal.linux"
+    android:versionCode="9"
+    android:versionName="9.0-Lite"
+    android:installLocation="preferExternal">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:label="RH Terminal Lite"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+        <activity android:name=".MainActivity"
+            android:label="RH Terminal"
+            android:windowSoftInputMode="adjustResize|stateVisible">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SafActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+	</application>
+</manifest>
